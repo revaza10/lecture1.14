@@ -1,0 +1,87 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+body {
+  background-color: $background-color;
+}
+
+h1 {
+  @include font-settings($font-weight-bold, 11px, 12.89px);
+  display: inline-block;
+  margin: 15px 15px 30px $base-margin;
+}
+
+h2 {
+  @include font-settings($font-weight-bold, 12px, 14.06px, $secondary-color);
+  display: inline-block;
+  margin: 10px 30px 5px $base-margin;
+}
+
+h3 {
+  @include font-settings($font-weight-regular, 12px, normal, $white-color);
+  display: inline-block;
+  margin: 0 0 0 50px;
+}
+
+p {
+  @include font-settings($font-weight-bold, 24px);
+  margin: 40px 0 40px $base-margin;
+}
+
+.content {
+  @include content-box();
+
+  .bg-img {
+    width: 100%;
+  }
+
+  h2 {
+    position: absolute;
+    top: 30px;
+    left: $base-margin;
+    @include font-settings($font-weight-bold, 20px, normal, $white-color);
+  }
+
+  div {
+    height: 170px;
+    padding-top: 70px;
+    padding-left: $base-margin;
+    display: inline-block;
+  }
+
+  p {
+    width: 240px;
+    margin-bottom: -20px;
+    @include font-settings($font-weight-bold, 10px, 20px, $gray-color);
+  }
+
+  .clock-icon {
+    width: 16px;
+    vertical-align: middle;
+    margin: 0 0 0 $base-margin;
+  }
+
+  span {
+    @include font-settings($font-weight-bold, 10px, normal, $gray-color);
+    vertical-align: middle;
+    margin: -150px 0 0 0;
+  }
+}
+
+.imiges {
+  margin: 0 0 0 $base-margin;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.down {
+  background-color: $dark-background;
+  width: 1480px;
+  height: 201px;
+  margin: 20px 0 0 0;
+
+  h2 {
+    margin: 60px 30px 5px $base-margin;
+  }
+}
